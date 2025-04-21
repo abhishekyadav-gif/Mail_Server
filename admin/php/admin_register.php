@@ -3,21 +3,25 @@ include('config.php');
 
 
 if (isset($_POST['fname'])) {
-  $First_Name = $_POST['fname'];
-  $Last_Name = $_POST['lname'];
+  $Fname = $_POST['fname'];
+  $Lname = $_POST['lname'];
   $Email = $_POST['email'];
   $Department = $_POST['department'];
   $Password = $_POST['password'];
   $Date = date('d/m/y');
-  $Role = "";
+  $id = "";
 
 
-  $data = $conn->prepare("INSERT INTO admin_regist VALUES ('$First_Name','$Last_Name','$Email','$Department','$Password','$Date','$Role')");
+  $data = $conn->prepare("INSERT INTO admin_regist VALUES ('$Fname','$Lname','$Email','$Department','$Password','$Date','$id')");
   $result = $data->execute();
   if ($result) {
-    echo "<script>alert('Register Sucess Plz Login')</script>";
+    echo "<script>alert('Register Sucessfull Plz Login')</script>";
+    echo "<script>window.location.href = '../../admin/index.php';</script>";
+
   } else {
     echo "<script>alert('PLz Register')</script>";
+    echo "<script>window.location.href = '../../admin/registermain.php';</script>";
+
 
   }
 

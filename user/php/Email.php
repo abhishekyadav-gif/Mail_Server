@@ -14,7 +14,7 @@ if (isset($_POST['btn'])) {
   $Date = date('d/m/y');
 
 
-  $sql = "INSERT INTO emails VALUE('$Email','$id','$Subject','$Message','$Attach_file','$Date')";
+  $sql = "INSERT INTO emails VALUE('$id','$Email','$Subject','$Message','$Attach_file','$Date')";
   $data = $conn->prepare($sql);
   $result = $data->execute();
   if ($result) {

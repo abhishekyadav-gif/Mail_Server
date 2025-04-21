@@ -23,7 +23,7 @@ if (isset($_POST['email'])) {
 
   } else {
     echo "<script> alert('Plz signup') </script>";
-    echo "<script>window.location.href = '../../admin/registermain.php';</script>";
+    echo "<script>window.location.href = '../../Main/adminmain.php';</script>";
 
   }
 

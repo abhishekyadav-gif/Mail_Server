@@ -108,7 +108,7 @@ $result = $conn->query($sql);
         <div class="email_item">
           <div class="icon">
             <?php
-            $senderEmail = $row['Receiver_mail'];
+            $senderEmail = $row['Email'];
             $emailParts = explode("@", $senderEmail); // Split email at "@"
             $namePart = $emailParts[0]; // Extract the part before "@"
             $firstLetter = strtoupper(substr($namePart, 0, 1)); // Get first letter
@@ -117,7 +117,7 @@ $result = $conn->query($sql);
             <span><?php echo $firstLetter; ?></span>
           </div>
           <div class="content">
-            <h4><?php echo htmlspecialchars($row['Receiver_mail']); ?></h4>
+            <h4><?php echo htmlspecialchars($row['Email']); ?></h4>
             <h5><?php echo htmlspecialchars($row['Subject']); ?></h5>
             <p><?php echo nl2br(htmlspecialchars($row['Message'])); ?></p>
           </div>

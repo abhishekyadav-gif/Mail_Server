@@ -164,7 +164,7 @@ $result = $conn->query($sql);
           <span class="close-btn" onclick="closeEmail(<?php echo $row['id']; ?>)">&times;</span>
           <h3>Sent Mail</h3>
           <p><strong>Date:</strong> <?php echo htmlspecialchars($row['Date']); ?></p>
-          <p><strong>To:</strong> <?php echo htmlspecialchars($row['Receiver_mail']); ?></p>
+          <p><strong>To:</strong> <?php echo htmlspecialchars($row['Email']); ?></p>
 
           <div class="email-form">
             <!-- Subject -->

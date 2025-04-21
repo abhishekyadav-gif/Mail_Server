@@ -3,7 +3,7 @@ include('config.php');
 if (isset($_POST['search'])) {
   $search = $_POST['search'];
 
-  $sql = "SELECT * FROM emails WHERE Receiver_mail LIKE '%$search%'";
+  $sql = "SELECT * FROM emails WHERE Email LIKE '%$search%'";
 
   $result = $conn->query($sql);
 }
@@ -125,7 +125,7 @@ if (isset($_POST['search'])) {
 
           </div>
           <div class="content">
-            <h4><?php echo htmlspecialchars($row['Receiver_mail']); ?></h4>
+            <h4><?php echo htmlspecialchars($row['Email']); ?></h4>
             <h5><?php echo htmlspecialchars($row['Subject']); ?></h5>
             <p><?php echo nl2br(htmlspecialchars($row['Message'])); ?></p>
           </div>

@@ -2,7 +2,7 @@
 include('config.php');
 
 // Fetch Data
-$sql = "SELECT id, Name, Email, Contact, Feedback, Date FROM feedback";
+$sql = "SELECT id, Name, Email, Contact, Message, Date FROM feedback";
 $data = $conn->prepare($sql);
 $data->execute();
 $userdata = $data->fetchAll();
@@ -86,7 +86,8 @@ $userdata = $data->fetchAll();
           <th>Name</th>
           <th>Email</th>
           <th>Contact</th>
-          <th>Feedback Date</th>
+          <th>Feedback</th>
+          <th>Date</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -96,7 +97,9 @@ $userdata = $data->fetchAll();
             <td><?php echo htmlspecialchars($row['Name']); ?></td>
             <td><?php echo htmlspecialchars($row['Email']); ?></td>
             <td><?php echo htmlspecialchars($row['Contact']); ?></td>
+            <td><?php echo htmlspecialchars($row['Message']); ?></td>
             <td><?php echo htmlspecialchars($row['Date']); ?></td>
+
             <td>
               <form action="php/delete_feedback.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">

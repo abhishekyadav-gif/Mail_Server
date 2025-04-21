@@ -84,11 +84,11 @@ session_start();
   <nav class="navbar">
     <img src="imag/lg4.png" alt="Logo">
     <ul class="nav-links">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="aboutmain.php">About</a></li>
-      <li><a href="contactmain.php">Contact</a></li>
-      <li><a href="feedbackmain.php">Give Feedback</a></li>
-      <li><a href="userchoicemain.php" title="Login"><i class=" fa fa-user" style="color: black;"></i></a></li>
+      <li><a href="Main/index.php">Home</a></li>
+      <li><a href="Main/aboutmain.php">About</a></li>
+      <li><a href="Main/contactmain.php">Contact</a></li>
+      <li><a href="Main/feedbackmain.php">Give Feedback</a></li>
+      <li><a href="Main/userchoicemain.php" title="Login"><i class=" fa fa-user" style="color: black;"></i></a></li>
 
     </ul>
     <span></span>

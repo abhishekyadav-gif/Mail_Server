@@ -72,12 +72,12 @@
 <body>
 
   <div class="content">
-    <img src="imag/main3.png" alt=" Image">
+    <img src="Main/imag/main3.png" alt=" Image">
     <div class="intro">
       <div class="text">
 
         <h2>Welcome to <span>Mail_Server </span> System</h2>
-        <a href="registermain.php"> <button>Register Now</button></a>
+        <a href="Main/registermain.php"> <button>Register Now</button></a>
 
 
       </div>
